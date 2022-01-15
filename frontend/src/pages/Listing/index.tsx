@@ -62,7 +62,7 @@ function Listing() {
 
           {page.content.map(item => {
                 return (
-                  <div key={item.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                  <div key={item.id} className="col-sm-6 col-lg-4 col-xl-3 mb-4">
                     <MovieCard movie={item} />
                   </div>
                 )
