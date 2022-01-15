@@ -28,7 +28,7 @@ function Listing() {
   // Forma correta: fazendo a requisição dentro de uma hook
   // useEffect
   useEffect(() => {
-    axios.get(`${BASE_URL}/movies?size=${page.size}&page=${pageNumber}`)
+    axios.get(`${BASE_URL}/movies?size=${page.size}&page=${pageNumber}&sort=id`)
       .then(response => {
         // console.log(response.data);
         // setPageNumber(data.number);
