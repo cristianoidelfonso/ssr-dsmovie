@@ -38,6 +38,10 @@ function Listing() {
     [pageNumber]
   );
 
+  const handlePageChange = (newNumber: number) => {
+    setPageNumber(newNumber);
+  }
+
   // Forma errada: deixando a requisição solta no ciclo de vida do componente
   // axios.get(`${BASE_URL}/movies?size=4&page=0`)
   // .then(response => {
@@ -49,7 +53,7 @@ function Listing() {
 
   return (
     <>
-      <Pagination />
+      <Pagination page={page} onChange={handlePageChange} />
 
       <div className="container">
         <div className="row">
