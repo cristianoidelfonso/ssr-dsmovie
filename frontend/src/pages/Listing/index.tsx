@@ -7,6 +7,8 @@ import { MoviePage } from "types/movie";
 
 function Listing() {
 
+  // const pageSize = 8;
+
   // useState
   const [pageNumber, setPageNumber] = useState(0);
   const [page, setPage] = useState<MoviePage>(
@@ -35,7 +37,7 @@ function Listing() {
       }
       );
   },
-    [pageNumber]
+    [page.size, pageNumber]
   );
 
   const handlePageChange = (newNumber: number) => {
