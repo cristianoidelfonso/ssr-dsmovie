@@ -3,7 +3,7 @@ import './style.css';
 
 function Navbar() {
   return (
-    <header>
+    <header className="sticky-top">
       <nav className="container">
         <div className="dsmovie-nav-content">
           <a href="/"><h1>DSMovie</h1></a>

@@ -31,9 +31,7 @@ function FormCard({ movieId }: Props) {
     if(!validateEmail(email)){
       return;
     }
-    
-    // console.log(email, score);
-    
+     
     const config: AxiosRequestConfig = {
       baseURL: BASE_URL,
       method: 'PUT',
@@ -46,7 +44,6 @@ function FormCard({ movieId }: Props) {
     }
 
     axios(config).then(response => {
-      // console.log(response.data);
       navigate("/");
     });
 
